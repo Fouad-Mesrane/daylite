@@ -26,7 +26,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li class="nav-item">
-              <Link to="/post" class="nav-link active">
+              <Link to="/newPost" class="nav-link active">
                 New Post
               </Link>
             </li>
