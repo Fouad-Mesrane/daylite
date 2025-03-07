@@ -10,7 +10,7 @@ const router = express.Router();
 
 router.get("/", getAllPosts);
 
-router.get("/posts/:id", getPostById);
+router.get("/:id", getPostById);
 
 router.post("/", createPost);
 
