@@ -1,6 +1,30 @@
-# daylite
+# **daylite**  App
 
-# Requirements
+## Introduction
+
+**daylite** is a lightweight social media platform designed around the principle that less is more. In an age of constant digital noise, **daylite** encourages users to focus on quality over quantity by allowing only one post per day. This simple limitation fosters a more intentional and meaningful sharing experience.
+
+### Key Features
+
+- One Post Per Day: Users can create and share only one post per day, making each post more thoughtful and valuable.
+- Gamified Leaderboard: Posts gain visibility through engagement, with a public leaderboard showcasing the most liked content.
+- Encourages Real-Life Experiences: By limiting social media time, Daylite motivates users to step away from their screens, explore the world, and return with meaningful moments to share.
+- Quality Over Quantity: Instead of endless scrolling, Daylite inspires users to focus on producing high-quality content that truly resonates.
+
+### Why **daylite** ?
+
+**daylite**  is built for those who seek a simpler, more intentional social media experience. Whether you're a creator looking to showcase your best content or someone who wants to break free from mindless scrolling, **daylite**  helps you engage with social media in a healthier, more fulfilling way.
+
+### How It Works
+Post Once a Day: Capture your best moment of the day and share it with your followers.
+
+Engage & Get Likes: Your post competes for a spot on the Leaderboard based on user engagement.
+
+Discover & Be Discovered: The leaderboard highlights top posts, allowing quality content to reach new audiences.
+
+Repeat Tomorrow: A fresh start every day means you have another chance to create and share something meaningful.
+
+# REQUIREMENTS
 
 ## Backend (Express): 
 
