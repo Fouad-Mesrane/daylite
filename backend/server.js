@@ -3,7 +3,7 @@ import cors from "cors";
 import "dotenv/config";
 import connectDB from "./config/db.js";
 import { Post } from "./models/PostsModel.js";
-
+import router from "./routes/usersRoutes.js";
 
 const app = express();
 
@@ -16,7 +16,10 @@ app.get("/", (req, res) => {
     res.send("API Running");
 });
 
-app.post('/posts', async (req, res) =>{
+
+app.use('/api/users', router);
+
+app.post('/api/posts', async (req, res) =>{
     try{
         const newPost = new Post({
             content: req.body.content
