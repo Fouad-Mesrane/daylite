@@ -1,4 +1,4 @@
-import { User } from "../models/UsersModel";
+import { User } from "../models/UsersModel.js";
 
 
 export const getAllUsers = async (req, res) => {
@@ -25,8 +25,8 @@ export const getUserById = async (req, res) => {
 
 export const createUser = async (req, res) => {
     try {
-        const { email, password } = req.body;
-        const user = new User({ email, password });
+        const {name, email, password } = req.body;
+        const user = new User({name, email, password });
         await user.save();
         res.status(201).json(user);
     } catch (error) {

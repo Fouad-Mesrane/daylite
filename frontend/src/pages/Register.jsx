@@ -13,9 +13,9 @@ const Register = () => {
                 {
                     method: 'POST',
                     body: JSON.stringify({
-                        name: nameRef,
-                        email: emailRef,
-                        password: pwdRef
+                        name: nameRef.current.value,
+                        email: emailRef.current.value,
+                        password: pwdRef.current.value
                     }),
                     headers: {
                         'Content-Type': 'application/json'
@@ -23,7 +23,7 @@ const Register = () => {
                 });
             const result = response.json();
             console.log("Registration successful", result);
-            navigate('/home');
+            navigate('/');
         } catch (error) {
             console.log(error);
         }
@@ -41,7 +41,7 @@ const Register = () => {
                             <input type="text" ref={emailRef} />
                         </label><br />
                         <label>Enter Password:
-                            <input ref={pwdRef} />
+                            <input type="password" ref={pwdRef} />
                         </label><br />
                         <button>Register</button>
                     </form>
