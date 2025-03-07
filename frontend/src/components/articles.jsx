@@ -10,7 +10,7 @@ function ArticlesList() {
       try {
         const response = await fetch("https://api.elifesciences.org/articles");
         const data = await response.json();
-        setArticles(data.items || []); // Assuming the articles are in 'items'
+        setArticles(data.items || []); 
       } catch (error) {
         console.error("Error fetching articles:", error);
       } finally {
