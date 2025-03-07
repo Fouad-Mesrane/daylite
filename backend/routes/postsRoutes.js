@@ -3,6 +3,8 @@ import { Post } from "../models/PostsModel.js";
 
 const router = express.Router();
 
+// New post
+
 router.post('/posts', async (req, res) =>{
     try{
         const newPost = new Post({
@@ -15,6 +17,8 @@ router.post('/posts', async (req, res) =>{
     }
 });
 
+// Delete post by id
+
 router.delete('/posts/:id', async (req, res) => {
     try {
         const deletedPost = await Post.findByIdAndDelete(req.params.id);
@@ -23,5 +27,14 @@ router.delete('/posts/:id', async (req, res) => {
         res.status(400).json({ err: 'Error deleting post', details: err.message})
     }
 });
+
+router.get('/posts', async (req, res) => {
+    try{
+        const posts = await Post.find();
+        res.status(200).json(posts);
+    } catch(err) {
+        res.status(500).json({ err: 'Error fetching all posts', details: err.message })
+    }
+})
 
 export default router
