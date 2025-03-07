@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <h1>a "log" from a citizen</h1>
+
      <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/Login" element={<Login />}/>
