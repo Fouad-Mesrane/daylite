@@ -1,4 +1,4 @@
-import Post from "../models/PostsModel.js"
+import {Post} from "../models/PostsModel.js"
 
 
 
