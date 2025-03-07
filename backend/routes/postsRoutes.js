@@ -24,7 +24,7 @@ router.delete('/posts/:id', async (req, res) => {
         const deletedPost = await Post.findByIdAndDelete(req.params.id);
     res.status(200).json({ message: "Post deleted successfully"})
     } catch(err) {
-        res.status(400).json({ err: 'Error deleting post', details: err.message})
+        res.status(400).json({ error: 'Error deleting post', details: err.message})
     }
 });
 
@@ -33,7 +33,16 @@ router.get('/posts', async (req, res) => {
         const posts = await Post.find();
         res.status(200).json(posts);
     } catch(err) {
-        res.status(500).json({ err: 'Error fetching all posts', details: err.message })
+        res.status(400).json({ error: 'Error fetching all posts', details: err.message })
+    }
+})
+
+router.get('/posts/:id', async (req, res) => {
+    try {
+        const post = await Post.findByIdAndDelete(req.params.id);
+        return res.status(200).json(post);
+    } catch(err) {
+        res.status(400).json({ error: 'Error fetching post', details: err.message })
     }
 })
 
