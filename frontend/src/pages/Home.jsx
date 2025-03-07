@@ -1,14 +1,12 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import { PostForm } from './PostForm'
+import React from "react";
+import Navbar from "../components/Navbar";
+
+import Feed from "../components/Feed";
 
 const Home = () => {
-  return (
-    <div>
-      <Navbar/>
-     
-    </div>
-  )
-}
+  return <div>
+    <Feed />
+  </div>;
+};
 
-export default Home
+export default Home;
