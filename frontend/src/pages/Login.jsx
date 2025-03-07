@@ -8,7 +8,10 @@ export default function Login(){
 
     return(
         <>
-          <form>
+        <h2>Login</h2>
+        <div className='form-container'>
+         <fieldset>
+          <form className='form-element'>
             <label>Email:
                 <input type="text" ref={emailRef} />
             </label><br/>
@@ -17,6 +20,8 @@ export default function Login(){
             </label><br/>
             <button>Login</button>
           </form>
+          </fieldset>
+          </div>
         </>
     )
 }
